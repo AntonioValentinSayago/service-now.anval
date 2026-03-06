@@ -28,7 +28,7 @@ function normalize(text: string) {
 }
 
 export default function SearchBox({
-  placeholder = "Buscar…",
+  placeholder = "Buscar Rapida…",
   items = [],
   minChars = 1,
   debounceMs = 200,
@@ -188,14 +188,13 @@ export default function SearchBox({
       {/* Dropdown */}
       <div
         className={cx(
-          "absolute left-0 right-0 mt-2 overflow-hidden rounded-2xl border bg-white shadow-lg",
+          "relative left-0 right-0 mt-2 overflow-hidden rounded-2xl border bg-white shadow-lg",
           canShowDropdown ? "block" : "hidden"
         )}
       >
         <ul id="searchbox-list" role="listbox" className="max-h-72 overflow-auto p-1">
           {results.map((item, index) => {
             const isActive = index === activeIndex;
-
             return (
               <li key={item.id} role="option" aria-selected={isActive}>
                 <button
@@ -221,7 +220,7 @@ export default function SearchBox({
       {/* Empty state (cuando no hay resultados) */}
       {open && query.trim().length >= minChars && results.length === 0 ? (
         <div className="absolute left-0 right-0 mt-2 rounded-2xl border border-slate-200 bg-white p-3 text-sm text-slate-600 shadow-lg">
-          Sin resultados
+          No se encontraron resultados
         </div>
       ) : null}
     </div>
