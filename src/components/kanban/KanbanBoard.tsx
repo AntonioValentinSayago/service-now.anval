@@ -277,17 +277,17 @@ export default function KanbanBoard() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="min-h-screen  bg-slate-50">
       {/* Header */}
       <div className="sticky top-0 z-10 border-b border-slate-200 bg-white/80 backdrop-blur">
         <div className="mx-auto max-w-6xl px-4 py-4">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <div>
               <h1 className="text-lg font-semibold text-slate-900">
-                Kanban Board
+                Kanban Board - Backlog
               </h1>
               <p className="text-sm text-slate-500">
-                Tablero estático para gestión de folios (Drag & Drop local).
+                Tablero estático para gestión de folios (05 de marzo de 2026).
               </p>
             </div>
 
@@ -322,7 +322,7 @@ export default function KanbanBoard() {
       </div>
 
       {/* Board */}
-      <div className="mx-auto max-w-6xl px-4 py-6">
+      <div className=" max-w-full px-4 py-6">
         <div className="grid gap-4 md:grid-cols-3">
           {COLUMNS.map((col) => {
             const colCards = columnsWithCards[col.id];
@@ -512,7 +512,7 @@ export default function KanbanBoard() {
                   onChange={(e) =>
                     setCreateInput((p) => ({ ...p, description: e.target.value }))
                   }
-                  className="mt-2 min-h-[90px] w-full resize-none rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 outline-none focus:border-indigo-300 focus:ring-2 focus:ring-indigo-100"
+                  className="mt-2 min-h-22.5 w-full resize-none rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 outline-none focus:border-indigo-300 focus:ring-2 focus:ring-indigo-100"
                   placeholder="Contexto breve, pasos, notas..."
                 />
               </div>
