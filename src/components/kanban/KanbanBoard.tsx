@@ -30,8 +30,9 @@ type CreateCardInput = {
 const STORAGE_KEY = "incident_radar:kanban_v1";
 
 const COLUMNS: KanbanColumn[] = [
-  { id: "todo", title: "To do", hint: "Pendientes" },
-  { id: "in_progress", title: "In progress", hint: "En curso" },
+  { id: "todo", title: "BackLog", hint: "Pendientes" },
+  { id: "in_progress", title: "En Progreso", hint: "En curso" },
+  { id: "done", title: "CGR", hint: "CGR Aplicativo" },
   { id: "done", title: "Done", hint: "Cerrados" },
 ];
 
